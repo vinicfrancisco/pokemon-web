@@ -3,12 +3,10 @@ export default {
 
   softBlack: '#312E38',
 
-  black: '#000000',
-  white: '#FFFFFF',
+  black: '#232129',
+  white: '#f4ede8',
 
-  darkGray: '#7e7e7e',
-  lightGray: '#f6f7fa',
-  gray: '#b2b2b2',
+  darkGray: '#666360',
 
   success: '#8DCB64',
   danger: '#e74c3c',

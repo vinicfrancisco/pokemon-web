@@ -12,7 +12,7 @@ export default createGlobalStyle`
 
   body {
     background: ${colors.softBlack};
-    color: #fff;
+    color: ${colors.white};
     -webkit-font-smoothing: antialiased;
   }
 
@@ -24,6 +24,11 @@ export default createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6, strong {
     font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${colors.white};
   }
 
   button {
