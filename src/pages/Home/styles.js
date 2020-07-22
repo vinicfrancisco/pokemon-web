@@ -90,6 +90,7 @@ export const PokemonCard = styled(Link)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  max-width: 500px;
   padding: 2px;
   transition: all 0.5s;
   width: 100%;
@@ -103,6 +104,7 @@ export const PokemonCard = styled(Link)`
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     margin: 0 auto;
+    max-width: 500px;
     width: 100%;
   }
 
