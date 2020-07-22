@@ -30,17 +30,15 @@ export default function Checkbox({ name, options, ...rest }) {
 
   const handleChange = useCallback(
     (option) => {
-      const findOption = selecteds.find(
-        (selected) => selected === option.value
-      );
+      const findOption = selecteds.find((selected) => selected === option);
 
       if (findOption) {
         return setSelecteds(
-          selecteds.filter((selected) => selected !== option.value)
+          selecteds.filter((selected) => selected !== option)
         );
       }
 
-      setSelecteds([...selecteds, option.value]);
+      setSelecteds([...selecteds, option]);
     },
     [selecteds]
   );
@@ -50,11 +48,11 @@ export default function Checkbox({ name, options, ...rest }) {
       <Options value={selecteds} {...rest}>
         {options.map((option) => (
           <Option
-            key={`radio-${fieldName}-${option.value}`}
-            active={selecteds.find((selected) => selected === option.value)}
+            key={`radio-${fieldName}-${option}`}
+            active={selecteds.find((selected) => selected === option)}
             onClick={() => handleChange(option)}
           >
-            {option.label}
+            {option}
 
             <span>
               <StyledIcon />
