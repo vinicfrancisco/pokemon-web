@@ -29,7 +29,7 @@ export default function Home() {
             <div>
               <h3>Pikachu</h3>
 
-              <span>Tipo: Elétrico</span>
+              <span>Tipos: Elétrico, Terra</span>
             </div>
           </PokemonCard>
 
@@ -42,7 +42,7 @@ export default function Home() {
             <div>
               <h3>Pikachu</h3>
 
-              <span>Tipo: Elétrico</span>
+              <span>Tipos: Elétrico, Terra</span>
             </div>
           </PokemonCard>
 
@@ -55,7 +55,7 @@ export default function Home() {
             <div>
               <h3>Pikachu</h3>
 
-              <span>Tipo: Elétrico</span>
+              <span>Tipos: Elétrico, Terra</span>
             </div>
           </PokemonCard>
         </div>
