@@ -3,40 +3,60 @@ import styled, { css } from 'styled-components';
 import colors from '~/styles/colors';
 
 export const Container = styled.div`
-  align-items: center;
-  background: ${colors.black};
-  border-radius: 10px;
-  border: 2px solid ${colors.black};
-  color: ${colors.darkGray};
   display: flex;
-  height: 38px;
-  padding: 8px;
-  max-width: 300px;
-  transition: all 0.5s;
+  flex-direction: column;
+  font-size: 62.5%;
+  height: 60px;
   width: 100%;
 
-  & + div {
-    margin-top: 8px;
+  div {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
+export const StyledInput = styled.input`
+  background: transparent !important;
+  border: none;
+  border-bottom: 1px solid ${colors.softBlack};
+  color: ${colors.white};
+  height: 38px;
+  font-size: 1rem;
+  line-height: 23px;
+  max-width: 100%;
+  padding: 0 8px;
+  transition: border-color 0.5s;
+  width: 100%;
+
+  &::placeholder {
+    color: ${colors.gray};
+  }
+
+  &:focus {
+    outline: none;
+    border-color: ${colors.primary};
+    border-width: 2px;
   }
 
   ${(props) =>
-    props.isFocused &&
+    props.blackBorder &&
     css`
-      color: ${colors.primary};
-      border-color: ${colors.primary};
+      border-color: ${colors.black};
     `}
+`;
 
-  input {
-    background: transparent;
-    border: 0;
-    color: ${colors.white};
-    flex: 1;
+export const LabelContainer = styled.div`
+  align-items: center;
+  background: ${colors.primary};
+  border: 0;
+  display: flex;
+  justify-content: center;
+`;
 
-    &::placeholder {
-      color: ${colors.darkGray};
-    }
-  }
-  svg {
-    margin-right: 8px;
-  }
+export const Label = styled.label`
+  color: ${colors.white};
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 23px;
+  margin: 0 4px;
 `;
