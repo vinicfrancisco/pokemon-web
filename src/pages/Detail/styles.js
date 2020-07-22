@@ -85,7 +85,6 @@ export const Pokemon = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  padding: 3px;
   width: 100%;
 
   img {
@@ -100,16 +99,16 @@ export const Pokemon = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 16px 8px;
+    padding: 16px;
     width: 100%;
 
     > h3 {
       color: ${colors.primary};
-      font-size: 22px;
+      font-size: 28px;
     }
 
     > span {
-      margin-top: 8px;
+      margin-top: 12px;
     }
   }
 `;
