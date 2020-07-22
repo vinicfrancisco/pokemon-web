@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 
-import Input from '~/components/Input';
-
-import { Container, PokemonCard } from './styles';
+import { Container, PokemonCard, Search } from './styles';
 
 export default function Home() {
+  const [isFocused, setIsFocused] = useState(false);
+
   return (
     <Container>
       <header>
@@ -16,7 +16,15 @@ export default function Home() {
         <header>
           <h2>Esses são seus pokemons</h2>
 
-          <Input name="search" placeholder="Buscar pelo nome" icon={FiSearch} />
+          <Search isFocused={isFocused}>
+            <FiSearch size={15} />
+
+            <input
+              placeholder="Buscar pelo nome"
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
+            />
+          </Search>
         </header>
 
         <div>
