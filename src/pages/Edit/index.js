@@ -21,6 +21,27 @@ import {
   Save,
 } from './styles';
 
+const types = [
+  'Bug',
+  'Dark',
+  'Dragon',
+  'Eletric',
+  'Fairy',
+  'Fighting',
+  'Fire',
+  'Flying',
+  'Ghost',
+  'Grass',
+  'Ground',
+  'Ice',
+  'Normal',
+  'Poison',
+  'Psychic',
+  'Rock',
+  'Steel',
+  'Water',
+];
+
 export default function Edit() {
   const history = useHistory();
   const { id } = useParams();
@@ -183,7 +204,7 @@ export default function Edit() {
 
             <Field>
               <Label>Tipos</Label>
-              <Checkbox name="types" options={['Grass', 'Fire', 'Shadow']} />
+              <Checkbox name="types" options={types} />
             </Field>
 
             <Field>
