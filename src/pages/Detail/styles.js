@@ -24,6 +24,7 @@ export const Container = styled.div`
   }
 
   section {
+    align-items: center;
     display: flex;
     flex-direction: column;
     padding: 24px 16px 0;
@@ -34,6 +35,7 @@ export const Container = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      max-width: 990px;
       width: 100%;
 
       > div {
