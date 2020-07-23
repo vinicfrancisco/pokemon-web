@@ -51,7 +51,7 @@ jest.mock('react-router-dom', () => {
 });
 
 describe('Detail page', () => {
-  it('should be able to list pokemons', async () => {
+  it("should be able to show pokemon's details", async () => {
     const useSelector = jest.spyOn(redux, 'useSelector');
     const useDispatch = jest.spyOn(redux, 'useDispatch');
 
