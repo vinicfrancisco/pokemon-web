@@ -4,11 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Creators as PokemonsActions } from '~/store/ducks/pokemons';
 
+import PokemonPlaceholder from './components/PokemonPlaceholder';
 import { Container, PokemonCard, Search } from './styles';
+
+const placeholders = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export default function Home() {
   const dispatch = useDispatch();
-  const pokemons = useSelector((state) => state.pokemons.data);
+  const { data: pokemons, loading } = useSelector((state) => state.pokemons);
 
   const [isFocused, setIsFocused] = useState(false);
   const [data, setData] = useState([]);
@@ -59,17 +62,27 @@ export default function Home() {
         </header>
 
         <div>
-          {data.map((pokemon) => (
-            <PokemonCard key={pokemon.id} to={`/pokemon/${pokemon.id}`}>
-              <img alt={pokemon.name} src={pokemon.image} />
+          {loading ? (
+            <>
+              {placeholders.map((pokemon) => (
+                <PokemonPlaceholder key={pokemon} />
+              ))}
+            </>
+          ) : (
+            <>
+              {data.map((pokemon) => (
+                <PokemonCard key={pokemon.id} to={`/pokemon/${pokemon.id}`}>
+                  <img alt={pokemon.name} src={pokemon.image} />
 
-              <div>
-                <h3>{pokemon.name}</h3>
+                  <div>
+                    <h3>{pokemon.name}</h3>
 
-                <span>{`Tipos: ${pokemon.types.join(', ')}`}</span>
-              </div>
-            </PokemonCard>
-          ))}
+                    <span>{`Tipos: ${pokemon.types.join(', ')}`}</span>
+                  </div>
+                </PokemonCard>
+              ))}
+            </>
+          )}
         </div>
       </section>
     </Container>
