@@ -5,11 +5,13 @@ import styled, { css } from 'styled-components';
 import colors from '~/styles/colors';
 
 export const Options = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  grid-gap: 16px;
   margin-top: 8px;
   margin-bottom: 16px;
+  max-width: 100%;
+  width: 100%;
 
   > button {
     &:last-child {
@@ -36,6 +38,7 @@ export const Option = styled.button.attrs({
   padding: 0 20px;
   position: relative;
   transition: all 0.3s;
+  width: 100%;
 
   > svg {
     margin-right: 10px;
