@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const api = new ApolloClient({
-  uri: process.env.REACT_APP_API_URL,
+  uri: 'https://graphql-pokemon.now.sh/',
   cache: new InMemoryCache(),
 });
 
