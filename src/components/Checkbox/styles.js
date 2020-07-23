@@ -2,7 +2,7 @@ import { FiCheck } from 'react-icons/fi';
 
 import styled, { css } from 'styled-components';
 
-import colors from '~/styles/colors';
+import colors from '../../styles/colors';
 
 export const Options = styled.div`
   display: grid;

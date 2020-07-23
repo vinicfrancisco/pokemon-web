@@ -1,7 +1,7 @@
 import { shade } from 'polished';
 import styled from 'styled-components';
 
-import colors from '~/styles/colors';
+import colors from '../../styles/colors';
 
 export const Container = styled.div`
   align-items: center;

@@ -5,7 +5,7 @@ import { useField } from '@unform/core';
 import { Options, Option, StyledIcon } from './styles';
 
 export default function Checkbox({ name, options, ...rest }) {
-  const radioRef = useRef(null);
+  const checkboxRef = useRef(null);
 
   const [selecteds, setSelecteds] = useState([]);
   const { fieldName, defaultValue, registerField } = useField(name);
@@ -13,7 +13,7 @@ export default function Checkbox({ name, options, ...rest }) {
   useEffect(() => {
     registerField({
       name: fieldName,
-      ref: radioRef.current,
+      ref: checkboxRef.current,
       path: 'value',
       setValue: (ref, optionValue) => {
         setSelecteds(optionValue);
@@ -48,7 +48,8 @@ export default function Checkbox({ name, options, ...rest }) {
       <Options value={selecteds} {...rest}>
         {options.map((option) => (
           <Option
-            key={`radio-${fieldName}-${option}`}
+            key={`checkbox-${fieldName}-${option}`}
+            data-testid={`checkbox-${fieldName}-${option}`}
             active={selecteds.find((selected) => selected === option)}
             onClick={() => handleChange(option)}
           >

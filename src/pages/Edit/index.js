@@ -6,13 +6,11 @@ import { Link, useHistory, useParams } from 'react-router-dom';
 import { Form } from '@unform/web';
 import { uuid } from 'uuidv4';
 
-import { Creators as PokemonsActions } from '~/store/ducks/pokemons';
-
-import Checkbox from '~/components/Checkbox';
-import Field from '~/components/Field';
-import Input from '~/components/Input';
-import Label from '~/components/Label';
-
+import Checkbox from '../../components/Checkbox';
+import Field from '../../components/Field';
+import Input from '../../components/Input';
+import Label from '../../components/Label';
+import { Creators as PokemonsActions } from '../../store/ducks/pokemons';
 import {
   Container,
   Content,
@@ -211,14 +209,19 @@ export default function Edit() {
               <AttackHeader>
                 <Label>Ataques Rápidos</Label>
 
-                <button type="button" onClick={handleAddFastAttack}>
+                <button
+                  data-testid="add-fast-attack"
+                  type="button"
+                  onClick={handleAddFastAttack}
+                >
                   <FiPlus size={20} />
                 </button>
               </AttackHeader>
 
-              {fastAttacks.map((attack) => (
+              {fastAttacks.map((attack, index) => (
                 <AttackContaier key={attack.id}>
                   <button
+                    data-testid={`remove-fast-attack-${index}`}
                     type="button"
                     onClick={() => handleRemoveFastAttack(attack.id)}
                   >
@@ -230,6 +233,7 @@ export default function Edit() {
                       <Label>Nome:</Label>
                       <Input
                         blackBorder
+                        data-testid={`fast-attack-name-${index}`}
                         name={`attack_name-${attack.id}`}
                         placeholder="Ex: Tackle"
                         value={attack.name}
@@ -247,6 +251,7 @@ export default function Edit() {
                       <Label>Tipo:</Label>
                       <Input
                         blackBorder
+                        data-testid={`fast-attack-type-${index}`}
                         name={`attack_type-${attack.id}`}
                         placeholder="Ex: Fire"
                         value={attack.type}
@@ -264,6 +269,7 @@ export default function Edit() {
                       <Label>Dano:</Label>
                       <Input
                         blackBorder
+                        data-testid={`fast-attack-damage-${index}`}
                         name={`attack_damage-${attack.id}`}
                         placeholder="Ex: 50"
                         value={attack.damage}
@@ -284,15 +290,19 @@ export default function Edit() {
             <Field>
               <AttackHeader>
                 <Label>Ataques Especiais</Label>
-
-                <button type="button" onClick={handleAddSpecialAttack}>
+                <button
+                  data-testid="add-special-attack"
+                  type="button"
+                  onClick={handleAddSpecialAttack}
+                >
                   <FiPlus size={20} />
                 </button>
               </AttackHeader>
 
-              {specialAttacks.map((attack) => (
+              {specialAttacks.map((attack, index) => (
                 <AttackContaier key={attack.id}>
                   <button
+                    data-testid={`remove-special-attack-${index}`}
                     type="button"
                     onClick={() => handleRemoveSpecialAttack(attack.id)}
                   >
@@ -304,6 +314,7 @@ export default function Edit() {
                       <Label>Nome:</Label>
                       <Input
                         blackBorder
+                        data-testid={`special-attack-name-${index}`}
                         name={`special_attack_name-${attack.id}`}
                         placeholder="Ex: Tackle"
                         value={attack.name}
@@ -321,6 +332,7 @@ export default function Edit() {
                       <Label>Tipo:</Label>
                       <Input
                         blackBorder
+                        data-testid={`special-attack-type-${index}`}
                         name={`special_attack_type-${attack.id}`}
                         placeholder="Ex: Fire"
                         value={attack.type}
@@ -338,6 +350,7 @@ export default function Edit() {
                       <Label>Dano:</Label>
                       <Input
                         blackBorder
+                        data-testid={`special-attack-damage-${index}`}
                         name={`special_attack_damage-${attack.id}`}
                         placeholder="Ex: 50"
                         value={attack.damage}
