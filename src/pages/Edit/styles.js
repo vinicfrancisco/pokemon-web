@@ -112,7 +112,7 @@ export const AttackContaier = styled.div`
 
   button {
     align-items: center;
-    background: ${colors.primary};
+    background: ${colors.danger};
     border-radius: 50%;
     border: none;
     display: flex;
