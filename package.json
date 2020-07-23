@@ -1,7 +1,7 @@
 {
   "name": "pokemon-web",
   "version": "0.1.0",
-    "engines": {
+  "engines": {
     "node": "12.x"
   },
   "private": true,
