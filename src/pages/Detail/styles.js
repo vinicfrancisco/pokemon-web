@@ -156,3 +156,21 @@ export const Attacks = styled.div`
 export const Damage = styled.h2`
   font-size: 36px;
 `;
+
+export const Types = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 8px;
+
+  > span {
+    background: ${colors.softBlack};
+    border-radius: 16px;
+    padding: 8px 16px;
+  }
+
+  > span + span {
+    margin-left: 8px;
+  }
+`;

@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 
 import { Creators as PokemonsActions } from '~/store/ducks/pokemons';
 
-import { Container, Pokemon, Attacks, Damage } from './styles';
+import { Container, Pokemon, Attacks, Damage, Types } from './styles';
 
 export default function Detail() {
   const { id } = useParams();
@@ -44,7 +44,11 @@ export default function Detail() {
           <div>
             <h3>{pokemon?.name || ''}</h3>
 
-            <span>{`Tipos: ${pokemon?.types.join(', ') || ''}`}</span>
+            <Types>
+              {pokemon?.types.map((type) => (
+                <span>{type}</span>
+              ))}
+            </Types>
 
             <Attacks>
               <h4>Ataques Rápidos:</h4>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import styled, { css } from 'styled-components';
 
-import colors from '~/styles/colors';
+import colors from '../../styles/colors';
 
 export const Container = styled.div`
   > header {
@@ -19,13 +19,18 @@ export const Container = styled.div`
   }
 
   section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     padding: 24px 16px 0;
+    width: 100%;
 
     header {
       align-items: flex-start;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      max-width: 990px;
       width: 100%;
 
       h2 {
@@ -39,6 +44,8 @@ export const Container = styled.div`
       display: grid;
       grid-gap: 16px;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 990px;
+      width: 100%;
     }
   }
 `;
@@ -90,7 +97,7 @@ export const PokemonCard = styled(Link)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 330px;
   padding: 2px;
   transition: all 0.5s;
   width: 100%;
@@ -105,11 +112,11 @@ export const PokemonCard = styled(Link)`
     border-top-right-radius: 6px;
     height: 300px;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 330px;
     width: 100%;
   }
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -124,5 +131,22 @@ export const PokemonCard = styled(Link)`
     span {
       margin-top: 8px;
     }
+  }
+`;
+
+export const Types = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  > span {
+    background: ${colors.softBlack};
+    border-radius: 16px;
+    padding: 8px 16px;
+  }
+
+  > span + span {
+    margin-left: 8px;
   }
 `;

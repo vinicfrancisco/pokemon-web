@@ -2,10 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Creators as PokemonsActions } from '~/store/ducks/pokemons';
-
+import { Creators as PokemonsActions } from '../../store/ducks/pokemons';
 import PokemonPlaceholder from './components/PokemonPlaceholder';
-import { Container, PokemonCard, Search } from './styles';
+import { Container, PokemonCard, Search, Types } from './styles';
 
 const placeholders = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
@@ -65,7 +64,7 @@ export default function Home() {
           {loading ? (
             <>
               {placeholders.map((pokemon) => (
-                <PokemonPlaceholder key={pokemon} />
+                <PokemonPlaceholder key={pokemon} id={pokemon} />
               ))}
             </>
           ) : (
@@ -77,7 +76,11 @@ export default function Home() {
                   <div>
                     <h3>{pokemon.name}</h3>
 
-                    <span>{`Tipos: ${pokemon.types.join(', ')}`}</span>
+                    <Types>
+                      {pokemon.types.map((type) => (
+                        <span>{type}</span>
+                      ))}
+                    </Types>
                   </div>
                 </PokemonCard>
               ))}

@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import colors from '~/styles/colors';
+import colors from '../../../../styles/colors';
 
 const pulse = keyframes`
   0% {
@@ -23,7 +23,7 @@ export const Container = styled.div`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 330px;
   padding: 2px;
   width: 100%;
 
@@ -38,7 +38,7 @@ export const Image = styled.div`
   border-top-right-radius: 6px;
   height: 300px;
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 330px;
   width: 100%;
 `;
 
