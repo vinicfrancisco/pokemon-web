@@ -3,8 +3,7 @@ import { FiArrowLeft, FiEdit } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
-import { Creators as PokemonsActions } from '~/store/ducks/pokemons';
-
+import { Creators as PokemonsActions } from '../../store/ducks/pokemons';
 import { Container, Pokemon, Attacks, Damage, Types } from './styles';
 
 export default function Detail() {
@@ -45,15 +44,15 @@ export default function Detail() {
             <h3>{pokemon?.name || ''}</h3>
 
             <Types>
-              {pokemon?.types.map((type) => (
-                <span>{type}</span>
+              {pokemon?.types?.map((type) => (
+                <span key={type}>{type}</span>
               ))}
             </Types>
 
             <Attacks>
               <h4>Ataques Rápidos:</h4>
 
-              {pokemon?.attacks.fast.map((attack) => (
+              {pokemon?.attacks?.fast.map((attack) => (
                 <div key={attack.name}>
                   <div>
                     <h5>{attack.name}</h5>
@@ -69,7 +68,7 @@ export default function Detail() {
             <Attacks>
               <h4>Ataques Especiais:</h4>
 
-              {pokemon?.attacks.special.map((attack) => (
+              {pokemon?.attacks?.special.map((attack) => (
                 <div key={attack.name}>
                   <div>
                     <h5>{attack.name}</h5>

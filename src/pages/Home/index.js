@@ -78,7 +78,7 @@ export default function Home() {
 
                     <Types>
                       {pokemon.types.map((type) => (
-                        <span>{type}</span>
+                        <span key={type}>{type}</span>
                       ))}
                     </Types>
                   </div>
