@@ -25,12 +25,12 @@ export default function Checkbox({ name, options, ...rest }) {
   }, [fieldName, registerField, selecteds]);
 
   useEffect(() => {
-    setSelecteds(defaultValue === undefined ? [] : defaultValue);
+    setSelecteds(defaultValue ?? []);
   }, [defaultValue]);
 
   const handleChange = useCallback(
     (option) => {
-      const findOption = selecteds.find((selected) => selected === option);
+      const findOption = selecteds.some((selected) => selected === option);
 
       if (findOption) {
         return setSelecteds(
