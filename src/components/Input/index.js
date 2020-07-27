@@ -17,10 +17,10 @@ export default function Input({ name, type, label = null, ...rest }) {
   }, [fieldName, registerField]);
 
   return (
-    <Container hidden={type === 'hidden'}>
+    <Container>
       <div>
-        <LabelContainer hidden={label === null}>
-          <Label hidden={label === null}>{label}</Label>
+        <LabelContainer>
+          <Label>{label}</Label>
         </LabelContainer>
 
         <StyledInput
