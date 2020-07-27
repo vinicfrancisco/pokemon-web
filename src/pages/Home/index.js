@@ -19,8 +19,8 @@ export default function Home() {
     (e) => {
       if (e.target.value !== '') {
         setData(
-          pokemons.filter((pokemon) =>
-            pokemon.name.toLowerCase().includes(e.target.value.toLowerCase())
+          pokemons.filter(({ name }) =>
+            name.toLowerCase().includes(e.target.value.toLowerCase())
           )
         );
       } else {
