@@ -18,27 +18,7 @@ import {
   AttackContaier,
   Save,
 } from './styles';
-
-const types = [
-  'Bug',
-  'Dark',
-  'Dragon',
-  'Eletric',
-  'Fairy',
-  'Fighting',
-  'Fire',
-  'Flying',
-  'Ghost',
-  'Grass',
-  'Ground',
-  'Ice',
-  'Normal',
-  'Poison',
-  'Psychic',
-  'Rock',
-  'Steel',
-  'Water',
-];
+import types from './types';
 
 export default function Edit() {
   const history = useHistory();
