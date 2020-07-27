@@ -2,7 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Creators as PokemonsActions } from '../../store/ducks/pokemons';
+import { Creators as PokemonsActions } from '~/store/ducks/pokemons';
+
 import PokemonPlaceholder from './components/PokemonPlaceholder';
 import { Container, PokemonCard, Search, Types } from './styles';
 

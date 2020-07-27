@@ -3,7 +3,7 @@ import * as redux from 'react-redux';
 
 import { render } from '@testing-library/react';
 
-import Detail from '../../pages/Detail';
+import Detail from '~/pages/Detail';
 
 const selected = {
   id: 'UG9rZW1vbjowMDE=',

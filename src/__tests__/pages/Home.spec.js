@@ -3,7 +3,7 @@ import * as redux from 'react-redux';
 
 import { render, fireEvent } from '@testing-library/react';
 
-import Home from '../../pages/Home';
+import Home from '~/pages/Home';
 
 const data = [
   {

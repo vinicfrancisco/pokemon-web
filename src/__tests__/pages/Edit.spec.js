@@ -3,7 +3,7 @@ import * as redux from 'react-redux';
 
 import { render, fireEvent } from '@testing-library/react';
 
-import Edit from '../../pages/Edit';
+import Edit from '~/pages/Edit';
 
 const selected = {
   id: 'UG9rZW1vbjowMDE',

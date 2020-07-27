@@ -6,11 +6,13 @@ import { Link, useHistory, useParams } from 'react-router-dom';
 import { Form } from '@unform/web';
 import { uuid } from 'uuidv4';
 
-import Checkbox from '../../components/Checkbox';
-import Field from '../../components/Field';
-import Input from '../../components/Input';
-import Label from '../../components/Label';
-import { Creators as PokemonsActions } from '../../store/ducks/pokemons';
+import { Creators as PokemonsActions } from '~/store/ducks/pokemons';
+
+import Checkbox from '~/components/Checkbox';
+import Field from '~/components/Field';
+import Input from '~/components/Input';
+import Label from '~/components/Label';
+
 import FastAttacks from './components/FastAttacks';
 import SpecialAttacks from './components/SpecialAttacks';
 import { Container, Content, Save } from './styles';

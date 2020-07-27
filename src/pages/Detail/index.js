@@ -3,7 +3,8 @@ import { FiArrowLeft, FiEdit } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
-import { Creators as PokemonsActions } from '../../store/ducks/pokemons';
+import { Creators as PokemonsActions } from '~/store/ducks/pokemons';
+
 import { Container, Pokemon, Attacks, Damage, Types } from './styles';
 
 export default function Detail() {

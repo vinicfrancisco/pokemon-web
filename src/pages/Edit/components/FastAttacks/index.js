@@ -1,9 +1,10 @@
 import React from 'react';
 import { FiPlus, FiX } from 'react-icons/fi';
 
-import Field from '../../../../components/Field';
-import Input from '../../../../components/Input';
-import Label from '../../../../components/Label';
+import Field from '~/components/Field';
+import Input from '~/components/Input';
+import Label from '~/components/Label';
+
 import { Header, AttackContainer } from './styles';
 
 export default function FastAttacks({
