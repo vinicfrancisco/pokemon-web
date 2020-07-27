@@ -44,19 +44,3 @@ export const StyledInput = styled.input`
       border-color: ${colors.black};
     `}
 `;
-
-export const LabelContainer = styled.div`
-  align-items: center;
-  background: ${colors.primary};
-  border: 0;
-  display: flex;
-  justify-content: center;
-`;
-
-export const Label = styled.label`
-  color: ${colors.white};
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 23px;
-  margin: 0 4px;
-`;

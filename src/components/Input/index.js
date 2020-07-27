@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 
 import { useField } from '@unform/core';
 
-import { Container, StyledInput, LabelContainer, Label } from './styles';
+import { Container, StyledInput } from './styles';
 
-export default function Input({ name, type, label = null, ...rest }) {
+export default function Input({ name, type, ...rest }) {
   const inputRef = useRef(null);
   const { fieldName, defaultValue, registerField, clearError } = useField(name);
 
@@ -19,10 +19,6 @@ export default function Input({ name, type, label = null, ...rest }) {
   return (
     <Container>
       <div>
-        <LabelContainer>
-          <Label>{label}</Label>
-        </LabelContainer>
-
         <StyledInput
           ref={inputRef}
           defaultValue={defaultValue}
